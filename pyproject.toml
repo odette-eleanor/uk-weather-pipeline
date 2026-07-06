@@ -7,6 +7,11 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "requests (>=2.34.2,<3.0.0)",
+    "pandas (>=3.0.3,<4.0.0)",
+    "sqlalchemy (>=2.0.51,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "psycopg2-binary (>=2.9.12,<3.0.0)"
 ]
 
 
