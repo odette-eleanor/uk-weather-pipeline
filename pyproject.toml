@@ -11,7 +11,8 @@ dependencies = [
     "pandas (>=3.0.3,<4.0.0)",
     "sqlalchemy (>=2.0.51,<3.0.0)",
     "dotenv (>=0.9.9,<0.10.0)",
-    "psycopg2-binary (>=2.9.12,<3.0.0)"
+    "psycopg2-binary (>=2.9.12,<3.0.0)",
+    "dbt-postgres (>=1.10.2,<2.0.0)",
 ]
 
 

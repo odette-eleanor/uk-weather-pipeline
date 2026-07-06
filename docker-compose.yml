@@ -16,6 +16,21 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+  
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile.dbt
+    container_name: weather_dbt
+    volumes:
+      - ./dbt:/usr/app/dbt
+      - ./dbt/profiles.yml:/root/.dbt/profiles.yml
+    working_dir: /usr/app/dbt
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DBT_PROFILES_DIR: /root/.dbt
 
 volumes:
   postgres_data:
